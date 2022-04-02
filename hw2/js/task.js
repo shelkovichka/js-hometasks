@@ -42,6 +42,7 @@ while (fairy > 0 && plates > 0) {
 
 console.log(plates);
 
+
 /*
 const MIN = 1, MAX = 9;
 let num = parseInt(Math.random() * (MAX - MIN) + MIN);
@@ -64,7 +65,9 @@ while (userNum !== num) {
 } 
 */
 
+
 const START = 10, END = 500;
+
 let n500 = parseInt(Math.random() * (END - START) + START);
 
 if (n500 >= 25 && n500 <= 200) {
@@ -72,6 +75,11 @@ if (n500 >= 25 && n500 <= 200) {
 } else {
 	console.log('число ' + (n500) + ' не содержится в интервале (25;200)');
 } 
+
+
+
+
+
 
 
  
