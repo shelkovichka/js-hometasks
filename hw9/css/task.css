@@ -1,0 +1,19 @@
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+td {
+	padding: 10px 10px;
+	width: 100px;
+	border: 1px solid #000;
+	text-align: center;
+}  
+
+#field {
+	width: 100px;
+	height: 100px;
+
+} 
