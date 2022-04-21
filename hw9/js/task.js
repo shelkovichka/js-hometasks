@@ -70,7 +70,11 @@ function generateTable(arr) {
 	for (let key in arr[0]) {
 		let cell = row.insertCell();
 		cell.innerText = key.toUpperCase();
-		cell.style.backgroundColor = '#483D8B';
+        cell.style = 
+        `
+        font-weight: bold;
+        background-color: #483D8B
+        `;
 	}
 
 		for (let obj of arr) {
@@ -100,25 +104,32 @@ let prises = {
 
 function generateField(n) {
 	if (n > 3) {
-		let tableArea = document.querySelector('#field');
-  		let table = document.createElement('table');
-		table.style.border = "1px solid black";
-		for (let i = 0; i < n; i++) {
-			let row = table.insertRow();
+		let table = document.querySelector('#field');
+        for (let i = 0; i < n; i++) {
+            let row = document.createElement('tr');
+            table.append(row);
 			for (let i = 0; i < n; i++) {
-				let cell = row.insertCell();
-/*				for (let p in prises) {
-					let cellsCount = n * n;
-					let randomCell = cell[Math.floor(Math.random() * cellsCount)];
-					randomCell.setAttribute('prise', 'prises[p]');
-				}
-*/			}
-		} tableArea.append(table);
+                let cell = document.createElement('td');
+                row.append(cell);
+            }
+        } 
+        
+        let cellsNum = document.querySelectorAll('td');
+        for (let i = 0; i < 3; i++) {
+            let randomCell = cellsNum[Math.floor(Math.random() * cellsNum.length)];
+                for (let p in prises) {
+                    randomCell.setAttribute('prise', prises[p]);
+                }               
+		} 
 	} else return false;
 }
 
 generateField(4)
 
+// Снала получаете все ячейки, через querySelectorAll, например. 
+// Потом делаете цикл на 3 итерации, 
+// на каждой итерации: получаете рандомное число от 0 до размера 
+// списка с ячейками (ячейки.legth), потом ячейка = всеЯчейки[рандомный индекс];
 
 
 
