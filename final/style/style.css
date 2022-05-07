@@ -1,0 +1,56 @@
+h2 {
+    color: rgb(27, 13, 41);
+    display: flex;
+    margin-left: 25%;
+}
+
+.complete {
+    display: none;
+    position: fixed;
+    margin-left: 70%;
+    color: #6CA589;
+}
+
+label {
+    color: rgb(27, 13, 41);
+    display: inline-block;
+    margin-left: 25%;
+    margin-top: 4vh;
+}
+
+input {
+    display: inline-block;
+    margin-left: 7%;
+    margin-top: 4vh;
+    width: 30%;
+}
+
+.incorrect {
+    display: flex;
+    position: fixed;
+    color: red;
+    font-size: 15px;
+    margin-left: 40%;
+}
+
+.task input {
+    text-align: justify;
+    margin-left: 6.8%;
+    height: 15vh;
+}
+
+.date input {
+    display: inline-block;
+    margin-left: 2.8%;
+    width: 30%;
+}
+
+.button {
+    color: rgb(45, 43, 86);
+    margin: 5% 33%;
+}
+
+.button input {
+    justify-content: center;
+    width: 30vw;
+}

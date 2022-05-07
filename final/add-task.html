@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Добавление задач</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="style/style.css">
+</head>
+<body>
+
+    <span class="complete">Задача была успешно добавлена</span>
+    <h2>Добавление задачи</h2>
+
+    <form name="add-task-form" novalidate>
+        <div>
+            <label>Название задачи</label>
+            <input name="title" type="text" placeholder="Введите название задачи" minlength="1" maxlength="20" required>
+            <span class="incorrect"></span>
+        </div>
+        <div class="task">
+            <label>Описание задачи</label>
+            <input name="description" type="text" placeholder="Введите описание задачи">
+        </div>
+        <div class="date">
+            <label>Срок выполнения задачи</label>
+            <input name="date" type="datetime-local" id="userdate" required>
+            <span class="incorrect"></span>
+        </div>
+        <div class="button">
+            <input type="submit" value="Добавить задачу">
+        </div>
+    </form>
+
+<script src="js/add-task.js"></script>   
+</body>
+</html>
